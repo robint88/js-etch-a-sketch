@@ -16,7 +16,20 @@ h2	{
 
 }
 
-.container {
+.squares {
 	background: teal;
-	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+
+}
+
+.square {
+	background: white;
+	display: inline-block;
+	margin: 2px;
+	padding: 2px;
+}
+
+.changed {
+	background: pink;
 }
