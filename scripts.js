@@ -1,14 +1,12 @@
 $(document).ready(function(){
 
 
-//NEED TO GET VALUE OF INPUT - NOT WORKING
-	// const numInput = parseInt($('#number').val());
-	// console.log(numInput);
+	const btn = $('#btn');
+	const reset = $('#reset');
 
+	$(btn).on('click', clearGrid);
+	$(reset).on('click', resetSize);
 
-	const button = $('#btn');
-
-	$('button').on('click', clearGrid);
 
 	//Create squares grid
 	for(let i=0; i < 16; i++){
@@ -21,9 +19,20 @@ $(document).ready(function(){
 		$(this).addClass('changed');
 	});
 
+	//------FUNCTIONS------//
+
 	//Clear Grid
 	function clearGrid(){
 		$('.square').removeClass('changed');
+	}
+
+	//Change grid size
+	function resetSize(){
+		$('#reset').on('click', function(){
+			//Reset grid size
+			let popup = prompt('What size grid? (Number must be greater than 16)');
+			console.log(popup);
+		});
 	}
 
 });
